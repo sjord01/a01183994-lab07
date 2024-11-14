@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+  <display-name>Archetype Created Web Application</display-name>
+   <servlet>
+        <servlet-name>GreetingServlet</servlet-name>
+        <jsp-file>/greeting.jsp</jsp-file>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>GreetingServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.css</url-pattern>
+	</servlet-mapping>
+    
+    <welcome-file-list>
+        <welcome-file>greeting</welcome-file>
+    </welcome-file-list>
+  <context-param>
+    <param-name>inputMessage</param-name>
+    <param-value>Type your first name and press "Submit"</param-value>
+</context-param>
+<context-param>
+    <param-name>welcomeMessage</param-name>
+    <param-value>Welcome to My JSP Page!</param-value>
+</context-param>
+</web-app>
